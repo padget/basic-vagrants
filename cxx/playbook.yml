@@ -1,0 +1,15 @@
+---
+- name: installation vm local environnement CI
+  hosts: all
+  tasks: 
+    - name: ensure htop and g++-10
+      package: 
+        name: 
+          - htop
+          - g++-10
+          - cmake
+        state: present
+      become: yes
+      become_user: root
+
+    
